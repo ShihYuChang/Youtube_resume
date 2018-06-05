@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" href="C:\Users\Owner\Desktop\Self-learning\Html\CSS\表單.css">
+</head>
+<body>
+	<form action="表單.html">
+		<label for="name">姓名</label><!--點文字及可輸入-->
+		<!--輸入文字形式-->
+		<input type="text" name="name" id="name" placeholder="請輸入姓名" class="text">
+		<label for="mail">電子郵件</label>
+		<input type="text" name="mail" id="mail" placeholder="請輸入email">
+		<!--送出(button是不會送出的按鈕)-->
+		<input type="submit" value="next" class="btn">
+		<!--單選-->
+		<h2>性別</h2>
+		<input type="radio" name="sex" value="woman">女生
+		<input type="radio" name="sex" value="man">男生
+		<!--多選-->
+		<h2>興趣</h2>
+		<input type="checkbox" name="hobby" value="movie">看電影
+		<input type="checkbox" name="hobby" value="sport">運動
+		<input type="checkbox" name="hobby" value="music">聽音樂
+		<br>
+		<input type="submit" value="送出">
+		<!--下拉式選單-->
+		<label for="grade">
+			<h2>系級</h2>
+		</label>
+		<select name="grade" id="grade">
+			<option value="110">110級</option>
+			<option value="109">109級</option>
+			<option value="108">108級</option>
+			<option value="107">107級</option>
+		<br>
+		<input type="submit" value="送出">
+		</select>
+		<!--多行文字(cols:字元數量 rows:行數)-->
+		<h2>內容</h2>
+		<textarea name="content" cols="30" rows="10" placeholder="請輸入30個以下的字"></textarea>
+		<br>
+		<input type="submit" value="送出">
+	</form>
+</body>
+</html>
