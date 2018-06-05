@@ -2,46 +2,278 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>index</title>
-	<link rel="stylesheet" href="C:\Users\Owner\Desktop\Self-learning\Html\CSS\表單.css">
+	<title>SamTube</title>
+	<link rel="stylesheet" href="css.css">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="all.js"></script>
 </head>
 <body>
-	<form action="表單.html">
-		<label for="name">姓名</label><!--點文字及可輸入-->
-		<!--輸入文字形式-->
-		<input type="text" name="name" id="name" placeholder="請輸入姓名" class="text">
-		<label for="mail">電子郵件</label>
-		<input type="text" name="mail" id="mail" placeholder="請輸入email">
-		<!--送出(button是不會送出的按鈕)-->
-		<input type="submit" value="next" class="btn">
-		<!--單選-->
-		<h2>性別</h2>
-		<input type="radio" name="sex" value="woman">女生
-		<input type="radio" name="sex" value="man">男生
-		<!--多選-->
-		<h2>興趣</h2>
-		<input type="checkbox" name="hobby" value="movie">看電影
-		<input type="checkbox" name="hobby" value="sport">運動
-		<input type="checkbox" name="hobby" value="music">聽音樂
-		<br>
-		<input type="submit" value="送出">
-		<!--下拉式選單-->
-		<label for="grade">
-			<h2>系級</h2>
-		</label>
-		<select name="grade" id="grade">
-			<option value="110">110級</option>
-			<option value="109">109級</option>
-			<option value="108">108級</option>
-			<option value="107">107級</option>
-		<br>
-		<input type="submit" value="送出">
-		</select>
-		<!--多行文字(cols:字元數量 rows:行數)-->
-		<h2>內容</h2>
-		<textarea name="content" cols="30" rows="10" placeholder="請輸入30個以下的字"></textarea>
-		<br>
-		<input type="submit" value="送出">
-	</form>
+	<div class="header">
+		<div class="logo">
+			<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\youtube_logo.jpg" alt="">
+		</div>
+		<div class="search">
+			<input type="text" placeholder="搜尋" name="search" class="input_text">
+			<input type="submit" class="btn" value="搜尋">
+		</div>
+	</div>
+	<div class="left_menu">
+		<div class="box1">
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\home-button.png" class="menu_logo">
+				<a href="#" class="option_text">首頁</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\fire.png" class="menu_logo">
+				<a href="#" class="option_text">發燒影片</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\rss.png" class="menu_logo">
+				<a href="#" class="option_text">訂閱內容</a>
+			</div>
+		</div>
+		<div class="box2">
+			<a href="#" class="menu_topic">媒體庫</a>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\view.png" class="menu_logo">
+				<a href="#" class="option_text">觀看紀錄</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\clock.png" class="menu_logo">
+				<a href="#" class="option_text">稍後觀看</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\playlist.png" class="menu_logo">
+				<a href="#" class="option_text">播放清單</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\like.png" class="menu_logo">
+				<a href="#" class="option_text">喜歡的影片</a>
+			</div>
+		</div>
+		<div class="box2">
+			<a href="#" class="menu_topic">訂閱內容</a>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\彭于晏.jpg" class="menu_pic">
+				<a href="#" class="option_text">張小宇</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\彭于晏2.jpg" class="menu_pic">
+				<a href="#" class="option_text">張山姆</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\彭于晏3.jpg" class="menu_pic">
+				<a href="#" class="option_text">張適宇</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\彭于晏4.jpg" class="menu_pic">
+				<a href="#" class="option_text">Sam Chang</a>
+			</div>
+		</div>
+		<div class="box4">
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\settings.png" class="menu_logo">
+				<a href="#" class="option_text">設定</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\flag.png" class="menu_logo">
+				<a href="#" class="option_text">檢舉紀錄</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\question.png" class="menu_logo">
+				<a href="#" class="option_text">說明</a>
+			</div>
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\exclamation.png" class="menu_logo">
+				<a href="#" class="option_text">喜歡的影片</a>
+			</div>
+		</div>
+		<div class="box5">
+			<div class="left_menu_option">
+				<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\email.png" class="menu_logo">
+				<h2 href="#" class="option_text">聯絡方式</h2>
+				<p style="color:#9b9b9b">sam21323@gmail.com</p>
+				<p style="color:#9b9b9b">0952688623</p>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="content">
+			<div class="main_part">
+				<div class="main_part_title">
+					<h2>學歷</h2>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\上安.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>台中市上安國民小學</h2>
+						</div>
+						<div class="video_detail">
+							<p>2004~2009</p>
+						</div>
+					</div>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\至善.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>台中市至善國民中學</h2>
+						</div>
+						<div class="video_detail">
+							<p>2009~2012</p>
+						</div>
+					</div>
+				</div>	
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\惠文.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>台中市立惠文高級中學</h2>
+						</div>
+						<div class="video_detail">
+							<p>2012~2015</p>
+						</div>
+					</div>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\交大.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>國立交通大學</h2>
+						</div>
+						<div class="video_detail">
+							<p>2015~2019</p>
+							<p>外國語文學系</p>
+						</div>
+					</div>
+				</div>
+				<div class="main_part_title">
+					<h2>經歷</h2>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\系學會.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>會長</h2>
+							<h2>交大外文系學會</h2>
+						</div>
+						<div class="video_detail">
+							<p>2017/06~2018/06</p>
+						</div>
+					</div>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\papacode.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>Marketing Intern－</h2>
+							<h2>Papacode程式老爹</h2>
+						</div>
+						<div class="video_detail">
+							<p>2018/04</p>
+						</div>
+					</div>
+				</div>	
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\RD.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>Co-Founder</h2>
+							<h2>Ryan Daddy宵夜代購</h2>
+						</div>
+						<div class="video_detail">
+							<p>2017/11</p>
+						</div>
+					</div>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\交傲.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>行銷營運長</h2>
+							<h2>交傲-Leader Lab</h2>
+						</div>
+						<div class="video_detail">
+							<p>2018/05~201808</p>
+						</div>
+					</div>
+				</div>
+				<div class="main_part_title">
+					<h2 id='skill'>技能</h2>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\html.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>HTML</h2>
+							<h2></h2>
+						</div>
+						<div class="video_detail">
+							<p>1 year</p>
+						</div>
+					</div>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\css.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>CSS</h2>
+						</div>
+						<div class="video_detail">
+							<p>1 year</p>
+						</div>
+					</div>
+				</div>	
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\python.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>Python</h2>
+						</div>
+						<div class="video_detail">
+							<p>6 months</p>
+						</div>
+					</div>
+				</div>
+				<div class="video">
+					<div class="video_pic">
+						<img src="C:\Users\Owner\Desktop\Self-learning\Html\仿Youtube\img\GA.png" class="video_pic">
+					</div>
+					<div class="video_description">
+						<div class="video_topic">
+							<h2>Google Analytics</h2>
+						</div>
+						<div class="video_detail">
+							<p>6 months</p>
+						</div>
+					</div>
+
+			</div>
+		</div>
+	</div>
+			
 </body>
 </html>
